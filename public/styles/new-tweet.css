@@ -1,0 +1,22 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: flex-start;
+  margin-bottom: 1.5em;
+}
+
+.new-tweet button {
+  display: flex;
+  align-items: center;
+  font-family: 'Bungee', sans-serif;
+  color: #fff;
+  background-color: #4056a1;
+}
+
+.tweet-tweet {
+  border-bottom: 6px solid #545149;
+  line-height: 1.3;
+}
