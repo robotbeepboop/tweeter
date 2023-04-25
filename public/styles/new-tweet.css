@@ -1,19 +1,22 @@
 .new-tweet {
+  width: 90%;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: space-between;
-  justify-content: flex-start;
   margin-bottom: 1.5em;
 }
 
-.new-tweet button {
+.submit-tweet {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   font-family: 'Bungee', sans-serif;
+}
+
+#submit {
   color: #fff;
   background-color: #4056a1;
+  border-style: groove;
 }
 
 .tweet-tweet {
