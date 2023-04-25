@@ -16,23 +16,24 @@ html {
 
 body {
   color: #545149;
-  background-color: #8084f5;
+  background-color: #4559af;
   background-image: url(https://www.transparenttextures.com/patterns/argyle.png);
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
 }
 
 main {
   width: 90%;
-  align-items: center;
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding-top: 1vh;
+  align-items: center;
+  padding-top: 20px;
 }
 
 /*
