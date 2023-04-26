@@ -51,6 +51,22 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!--Custom error messages-->
+      <section id="error-messages">
+        <div class="error-too-short">
+          <i class="fa-solid fa-triangle-exclamation" style="color:darkorange"></i>
+          <h4>Uh oh! Your tweet is too short!</h4>
+          <i class="fa-solid fa-triangle-exclamation" style="color:darkorange"></i>
+        </div>
+        <div class="error-too-long">
+          <i class="fa-solid fa-triangle-exclamation" style="color:darkorange"></i>
+          <h4>Uh oh! Your tweet is too long! Your Tweet must be 140 characters or shorter!</h4>
+          <i class="fa-solid fa-triangle-exclamation" style="color:darkorange"></i>
+        </div>
+      </section>
+
+      <!--Make new tweet-->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action='/tweets' method="POST" id="tweet-form">
