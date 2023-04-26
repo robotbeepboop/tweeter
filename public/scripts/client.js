@@ -27,8 +27,19 @@ $(document).ready(function() {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
   
+  const loadTweets = function() {
+    //use jQuery to make GET request to /tweets to get array of tweets as JSON
+    $ajax({
+      url: '/tweets',
+      method: 'GET'
+    })
+    .done((tweetData) => {
+      renderTweets(tweetData);
+    })
+  };
+
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       // loops through tweets
@@ -38,8 +49,7 @@ $(document).ready(function() {
       // takes return value and appends it to the tweets container
       $('#tweets-container').append($tweet);
     }
-    
-  }
+  };
   
   const createTweetElement = function(tweetData) {
     //find how to discplay time ago posted
