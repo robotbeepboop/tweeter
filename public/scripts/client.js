@@ -5,30 +5,12 @@
  */
 
 $(document).ready(function() {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-          "handle": "@SirIsaac"
-        },
-      "content": {
-          "text": "If I have seen further it is by standing on the shoulders of giants"
-        },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  //hide error messages until error is thrown
+  $('#error-too-short').hide();
+  $('#error-too-long').hide();
   
+  const data = [];//data will be filled in by JSON file :)
+
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       // loops through tweets
@@ -78,13 +60,25 @@ $(document).ready(function() {
 
   $form.on('submit', (event) => {
     event.preventDefault();
-    const data = $form.serialize();
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: data
-    }).then(() => {
-      loadTweets();
-    });
+    //get max length, input length, and compare them
+    const maxLength = 140;
+    const inputLength = $(this).find('#tweet-text').val().length;
+
+    if(!inputLength) {
+      $('#error-too-short').show();
+      $('#error-too-long').hide();
+    } else if (inputLength > maxLength) {
+      $('#error-too-short').hide();
+      $('#error-too-long').show();
+    } else {
+      const data = $form.serialize();
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: data
+      }).then(() => {
+        loadTweets();
+      });
+    }
   });
 });
