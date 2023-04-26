@@ -28,5 +28,5 @@ textarea {
 .submit-tweet button {
   color: #fff;
   background-color: #4056a1;
-  border-style: groove;
+  border-radius: 5px;
 }
