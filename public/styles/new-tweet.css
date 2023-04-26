@@ -30,3 +30,10 @@ textarea {
   background-color: #4056a1;
   border-radius: 5px;
 }
+
+.error-messages {
+  border: 3px solid darkorange;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
