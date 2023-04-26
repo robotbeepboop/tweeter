@@ -1,4 +1,4 @@
-header {
+.profile {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,4 +7,8 @@ header {
   margin-top: 150px;
   padding: 5px;
   color: white;
+}
+
+.profile-name {
+  margin-top: -35px;
 }
