@@ -52,7 +52,7 @@ $(document).ready(function() {
   };
   
   const createTweetElement = function(tweetData) {
-    //find how to discplay time ago posted
+    //use timeago.format on display
     let $tweet = $(`<!--display created tweets-->
       <article class="tweet">
         <header class="tweet-header">
@@ -62,7 +62,7 @@ $(document).ready(function() {
         </header>
         <div class="tweet-content">${tweetData.content.text}</div>
         <footer class="tweet-footer">
-          <span class="time-posted">${}</span>
+          <span class="time-posted">${timeago.format(tweetData.created_at)}</span>
           <div class="tweet-interaction">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
