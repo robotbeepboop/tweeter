@@ -29,23 +29,11 @@ $(document).ready(function() {
     }
   ];
   
-  const loadTweets = function() {
-    //use jQuery to make GET request to /tweets to get array of tweets as JSON
-    $ajax({
-      url: '/tweets',
-      method: 'GET'
-    })
-    .done((tweetData) => {
-      renderTweets(tweetData);
-    })
-  };
-
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       // loops through tweets
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
-      console.log($tweet);
       // takes return value and appends it to the tweets container
       $('#tweets-container').append($tweet);
     }
@@ -74,4 +62,29 @@ $(document).ready(function() {
   };
   
   renderTweets(data);
+
+  const loadTweets = function() {
+    //use jQuery to make GET request to /tweets to get array of tweets as JSON
+    $.ajax({
+      method: 'GET',
+      url: '/tweets'
+    })
+    .done((tweetData) => {
+      renderTweets(tweetData);
+    })
+  };
+
+  const $form = $('#tweet-form');
+
+  $form.on('submit', (event) => {
+    event.preventDefault();
+    const data = $form.serialize();
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: data
+    }).then(() => {
+      loadTweets();
+    });
+  });
 });
