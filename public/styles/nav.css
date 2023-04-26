@@ -19,3 +19,12 @@ nav {
   justify-content: center;
   flex-direction: column;
 }
+
+div.new-tweet {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: end;
+  align-items: center;
+}
