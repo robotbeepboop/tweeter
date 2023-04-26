@@ -11,13 +11,17 @@ $(document).ready(function() {
   
   const data = [];//data will be filled in by JSON file :)
 
+  const $tweetsContainer = $('#tweets-container');
+
   const renderTweets = function(tweets) {
+    $tweetsContainer.empty();
     for (let tweet of tweets) {
       // loops through tweets
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $('#tweets-container').append($tweet);
+      //output the tweet at top of the page
+      $('#tweets-container').prepend($tweet);
     }
   };
   
