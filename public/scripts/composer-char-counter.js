@@ -1,12 +1,12 @@
 $(document).ready(function() {
   // --- our code goes here ---
   $('#tweet-text').on('input', function() {
-    //count input length
-    const input = $(this).val().length;
+    const text = $(this).val().length;
     const maximumInput = 140;
-    let remaining = maximumInput - input;
+    let remaining = maximumInput - text;
+
     //find the counter
-    const $counter = $(this).parent().children('.counter');
+    const $counter = $(this).parent().find('.counter');
 
     $counter.text(remaining);
     if(remaining < 0) {
