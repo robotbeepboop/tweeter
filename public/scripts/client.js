@@ -70,6 +70,7 @@ $(document).ready(function() {
     } else if (inputLength > maxLength) {
       $('#error-too-short').hide();
       $('#error-too-long').show();
+      //too long still submits, resolve later
     } else {
       const data = $form.serialize();
       $.ajax({
