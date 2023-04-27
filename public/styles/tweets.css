@@ -12,6 +12,10 @@
   padding: 25px;
 }
 
+article.tweet:hover {
+  box-shadow: 10px 10px 2px 1px rgb(114, 136, 160);
+}
+
 .tweet-header {
   display: flex;
   flex-direction: row;
@@ -44,6 +48,10 @@
 
 .tweet-interaction {
   color: #334370;
+}
+
+div.tweet-interaction:hover {
+  color: darkorange;
 }
 
 @media only screen and (min-width: 1024px) {
