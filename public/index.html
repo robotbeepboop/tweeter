@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!--Meta info for responsive design implementation-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +37,7 @@
       <span class="app-name">tweeter</span>
       <div class="new-tweet">
         <span class="write-new-tweet"><strong>Write</strong> a new tweet</span>
-        <i class="fa-solid fa-angles-down"></i>
+        <i class="fa-solid fa-angles-down" style="color: darkorange"></i>
       </div>
     </nav>
 
@@ -51,23 +54,21 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
 
-      <!--Custom error messages-->
-      <section id="error-messages">
-        <div class="error-too-short">
+        <!--Custom error messages, dont need their own section-->
+        <span id="error-too-short" class="error-message">
           <i class="fa-solid fa-triangle-exclamation" style="color:darkorange"></i>
           <h4>Uh oh! Your tweet is too short!</h4>
           <i class="fa-solid fa-triangle-exclamation" style="color:darkorange"></i>
-        </div>
-        <div class="error-too-long">
+        </span>
+        <span id="error-too-long" class="error-message">
           <i class="fa-solid fa-triangle-exclamation" style="color:darkorange"></i>
-          <h4>Uh oh! Your tweet is too long! Your Tweet must be 140 characters or shorter!</h4>
+          <h4>Uh oh! Your Tweet must be 140 characters or shorter!</h4>
           <i class="fa-solid fa-triangle-exclamation" style="color:darkorange"></i>
-        </div>
-      </section>
+        </span>
 
-      <!--Make new tweet-->
-      <section class="new-tweet">
+        <!--Make new tweet-->
         <h2>Compose Tweet</h2>
         <form action='/tweets' method="POST" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
@@ -81,6 +82,7 @@
 
       <!--placeholder for created tweets that get rendered in client.js-->
       <section id="tweets-container"></section>
+      
     </main>
   </body>
 </html>
