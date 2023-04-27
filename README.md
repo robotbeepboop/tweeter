@@ -16,3 +16,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot showing how the web app looks on a large screen"](https://github.com/robotbeepboop/tweeter/blob/master/docs/bigscreen.png)
+
+!["Screenshot showing how the web app looks on a small screen"]
+
+!["Screenshot showing a newly posted tweet"]
