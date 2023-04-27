@@ -13,8 +13,14 @@ $(document).ready(function() {
 
   const $tweetsContainer = $('#tweets-container');
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const renderTweets = function(tweets) {
-    $tweetsContainer.empty();
+    $tweetsContainer.empty();//clear everything before creating new stuff
     for (let tweet of tweets) {
       // loops through tweets
       // calls createTweetElement for each tweet
@@ -77,6 +83,7 @@ $(document).ready(function() {
       //too long still submits, resolve later
     } else {
       const data = $form.serialize();
+      //const safeHTML = `<p>${escape(textFromUser)}</p>`;
       $.ajax({
         method: 'POST',
         url: '/tweets',
