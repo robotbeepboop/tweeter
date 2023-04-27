@@ -88,6 +88,9 @@ $(document).ready(function() {
         url: '/tweets',
         data: data
       }).then(() => {
+        //reset textbox and counter with "this"
+        $(this).find("#tweet-text").val("");
+        $(this).find(".counter").val(maxLength);
         loadTweets();
       });
     }
