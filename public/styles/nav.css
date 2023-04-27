@@ -26,17 +26,6 @@ div.new-tweet {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: end;
-  align-items: center;
-}
-
-span.write-new-tweet {
-  font-size: 1.25rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
   align-items: center;
 }
 
