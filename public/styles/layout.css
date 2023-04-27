@@ -38,4 +38,19 @@ main {
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
+ * Make responsive CSS based on min-width to not impact smaller screen sizes
  */
+
+ /*Make display into a row alignment instead of column*/
+ @media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  main {
+    width: 150%;
+    margin: 150px 50px 0px 50px;
+    padding: 15px;
+  }
+ }
