@@ -13,6 +13,7 @@ $(document).ready(function() {
 
   const $tweetsContainer = $('#tweets-container');
 
+  //to prevent cross site scripting :)
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -25,8 +26,8 @@ $(document).ready(function() {
       // loops through tweets
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
-      // takes return value and appends it to the tweets container
-      //output the tweet at top of the page
+      // takes return value and prepends it to the tweets container
+      //outputs the tweet at top of the page (order from newest to oldest)
       $('#tweets-container').prepend($tweet);
     }
   };
@@ -40,7 +41,7 @@ $(document).ready(function() {
             <h4 class="display-name">${tweetData.user.name}</h4>
             <h4 class="username">${tweetData.user.handle}</h4>
         </header>
-        <div class="tweet-content">${tweetData.content.text}</div>
+        <div class="tweet-content">${escape(tweetData.content.text)}</div>
         <footer class="tweet-footer">
           <span class="time-posted">${timeago.format(tweetData.created_at)}</span>
           <div class="tweet-interaction">
@@ -80,10 +81,8 @@ $(document).ready(function() {
     } else if (inputLength > maxLength) {
       $('#error-too-short').hide();
       $('#error-too-long').show();
-      //too long still submits, resolve later
     } else {
       const data = $form.serialize();
-      //const safeHTML = `<p>${escape(textFromUser)}</p>`;
       $.ajax({
         method: 'POST',
         url: '/tweets',
