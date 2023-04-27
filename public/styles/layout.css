@@ -26,7 +26,7 @@ body {
 }
 
 main {
-  width: 100%;
+  width: 90%;
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ main {
   }
 
   main {
-    width: 100%;
+    width: 90%;
     margin: 150px 50px 0px 50px;
     padding: 15px;
   }
