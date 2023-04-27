@@ -13,6 +13,7 @@ nav {
 
 .app-name {
   font-family: 'Bungee', cursive;
+  font-size: 1.5rem;
   display: flex;
   text-align: end;
   flex-wrap: wrap;
@@ -27,4 +28,24 @@ div.new-tweet {
   justify-content: center;
   align-content: end;
   align-items: center;
+}
+
+span.write-new-tweet {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    height: 150px;
+  }
+
+  .app-name {
+    font-size: 2rem;
+  }
 }
