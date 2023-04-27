@@ -21,6 +21,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Screenshot showing how the web app looks on a large screen"](https://github.com/robotbeepboop/tweeter/blob/master/docs/bigscreen.png)
 
-!["Screenshot showing how the web app looks on a small screen"]
+!["Screenshot showing how the web app looks on a small screen"](https://github.com/robotbeepboop/tweeter/blob/master/docs/smallscreen.png)
 
-!["Screenshot showing a newly posted tweet"]
+!["Screenshot showing a newly posted tweet"](https://github.com/robotbeepboop/tweeter/blob/master/docs/postedtweet.png)
