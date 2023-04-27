@@ -31,9 +31,8 @@ textarea {
   border-radius: 5px;
 }
 
-.error-messages {
+#error-messages {
   border: 3px solid darkorange;
-  border-radius: 10px;
+  padding: 5px;
   display: flex;
-  flex-direction: row;
 }
