@@ -24,6 +24,11 @@ article.tweet:hover {
   align-items: center;
 }
 
+.tweet-header div {
+  display: flex;
+  flex-direction: row;
+}
+
 .user-profile-picture {
   margin: 0 10px;
   height: auto;
@@ -50,7 +55,7 @@ article.tweet:hover {
   color: #334370;
 }
 
-div.tweet-interaction:hover {
+i:hover {
   color: darkorange;
 }
 
