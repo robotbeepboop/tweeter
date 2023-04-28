@@ -37,8 +37,10 @@ $(document).ready(function() {
     let $tweet = $(`<!--display created tweets-->
       <article class="tweet">
         <header class="tweet-header">
+          <div>
             <img class="user-profile-picture" src="${tweetData.user.avatars}">
             <h4 class="display-name">${tweetData.user.name}</h4>
+          </div>
             <h4 class="username">${tweetData.user.handle}</h4>
         </header>
         <div class="tweet-content">${escape(tweetData.content.text)}</div>
